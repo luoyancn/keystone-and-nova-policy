@@ -1,0 +1,5 @@
+
+Policy File for OpenStack Keystone and Nova
+
+For keystone v3, we need more roles like admin, domain_admin to
+distinguish the 'global' admin from 'group' admin.
