@@ -44,7 +44,7 @@
     "identity:list_projects": "rule:admin_required or rule:domain_admin_and_matching_domain_id",
     "identity:create_project": "rule:admin_required or rule:domain_admin_and_matching_project_domain_id or rule:domain_admin_and_matching_project_user_domain_id",
     "identity:update_project": "rule:admin_required or rule:domain_admin_and_matching_target_project_domain_id or rule:domain_admin_and_matching_project_user_domain_id",
-    "identity:list_user_projects": "rule:owner or rule:domain_admin_and_matching_domain_id",
+    "identity:list_user_projects": "rule:admin_required or rule:owner or rule:domain_admin_and_matching_domain_id",
     "identity:delete_project": "rule:admin_required or rule:domain_admin_and_matching_target_project_domain_id or rule:domain_admin_and_matching_project_user_domain_id",
 
     "domain_admin_and_matching_target_user_domain_id": "rule:admin_or_domain_admin and (domain_id:%(target.user.domain_id)s or user_domain_id:%(target.user.domain_id)s)",
@@ -61,7 +61,7 @@
     "admin_and_matching_group_domain_id": "rule:admin_required and domain_id:%(group.domain_id)s",
     "identity:get_group": "rule:admin_required or rule:admin_and_matching_target_group_domain_id",
     "identity:list_groups": "rule:admin_required or rule:domain_admin_and_matching_domain_id",
-    "identity:list_groups_for_user": "rule:owner or rule:domain_admin_and_matching_domain_id",
+    "identity:list_groups_for_user": "rule:admin_required or rule:owner or rule:domain_admin_and_matching_domain_id",
     "identity:create_group": "rule:admin_required or rule:admin_and_matching_group_domain_id",
     "identity:update_group": "rule:admin_required or rule:admin_and_matching_target_group_domain_id",
     "identity:delete_group": "rule:admin_required or rule:admin_and_matching_target_group_domain_id",
