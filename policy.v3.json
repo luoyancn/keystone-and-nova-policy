@@ -113,7 +113,7 @@
     "domain_admin_for_grants": "rule:admin_or_domain_admin and (domain_id:%(domain_id)s or domain_id:%(target.project.domain_id)s or user_domain_id:%(domain_id)s or user_domain_id:%(target.project.domain_id)s)",
     "project_admin_for_grants": "rule:admin_or_domain_admin_or_project_admin and project_id:%(project_id)s",
     "not_admin_role":"not ('admin':%(target.role.name)s or 'service':%(target.role.name)s)",
-    "not_domain_admin_role":"not ('domain_admin':%(target.role.name)s or 'monitor':%(target.role.name)s)",
+    "not_domain_admin_role":"not ('domain_admin':%(target.role.name)s)",
     "identity:check_grant": "rule:admin_required or rule:domain_admin_for_grants or rule:project_admin_for_grants",
     "identity:list_grants": "rule:admin_required or rule:domain_admin_for_grants or rule:project_admin_for_grants",
     "identity:create_grant": "rule:admin_required or (((rule:domain_admin_for_grants or rule:project_admin_for_grants) and rule:not_domain_admin_role) and rule:not_admin_role)",
